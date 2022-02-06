@@ -1,9 +1,9 @@
 import getDistances from "./getDistances.js"
 
-getDistances("33000", ["31000", "59110"])
+getDistances("59110", ["31000", "33000", "75015", "06000"])
     .then(function (response) {
         // Add your own result handling here
-        console.log("response", JSON.stringify(response));
+        console.log("response", response);
     })
     .catch(function (err) {
         var str = "An error occurred: " + err;
