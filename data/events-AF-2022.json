@@ -1,0 +1,805 @@
+[
+    {
+        "name": "Montauban Ladies Open (Pro LETAS)",
+        "dates": {
+            "start": "2022-06-10",
+            "end": "2022-06-12"
+        },
+        "location": {
+            "name": "Montauban",
+            "postalCode": "82000"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 1ère Division - Trophée Puiforcat",
+        "dates": {
+            "start": "2022-06-15",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Hossegor",
+            "postalCode": "40150"
+        }
+    },
+    {
+        "name": "Championnat de France des équipes 2 Mid-Amateurs Messieurs",
+        "dates": {
+            "start": "2022-06-16",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Charmeil",
+            "postalCode": "38210"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 2ème Division A",
+        "dates": {
+            "start": "2022-06-16",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Strasbourg",
+            "postalCode": "67400"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 2ème Division B",
+        "dates": {
+            "start": "2022-06-16",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Chantaco",
+            "postalCode": "64500"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 3ème Division A",
+        "dates": {
+            "start": "2022-06-16",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Cholet",
+            "postalCode": "49300"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 3ème Division B",
+        "dates": {
+            "start": "2022-06-16",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Dieppe",
+            "postalCode": "76200"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 3ème Division C",
+        "dates": {
+            "start": "2022-06-16",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Limoges",
+            "postalCode": "87000"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 4ème Division A",
+        "dates": {
+            "start": "2022-06-17",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Pornic",
+            "postalCode": "44210"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 4ème Division B",
+        "dates": {
+            "start": "2022-06-17",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Bouleaux",
+            "postalCode": "68310"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Messieurs - 4ème Division C",
+        "dates": {
+            "start": "2022-06-17",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Porcelaine",
+            "postalCode": "87350"
+        }
+    },
+    {
+        "name": "Open de la Mirabelle d'Or (Pro AT)",
+        "dates": {
+            "start": "2022-06-17",
+            "end": "2022-06-19"
+        },
+        "location": {
+            "name": "Grange Aux Ormes",
+            "postalCode": "57155"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Dames - 1ère Division - Trophée Cotnareanu",
+        "dates": {
+            "start": "2022-06-23",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Barriere La Baule",
+            "postalCode": "44117"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Dames - 2ème Division A",
+        "dates": {
+            "start": "2022-06-23",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Bordeaux Lac",
+            "postalCode": "33300"
+        }
+    },
+    {
+        "name": "Open de Bretagne (Pro CT)",
+        "dates": {
+            "start": "2022-06-23",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Pleneuf Val Andre",
+            "postalCode": "22370"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Dames - 3ème Division A",
+        "dates": {
+            "start": "2022-06-24",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "La Domangere",
+            "postalCode": "85310"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Dames - 3ème Division B",
+        "dates": {
+            "start": "2022-06-24",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Montpensier",
+            "postalCode": "03700"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Dames - Promotion A",
+        "dates": {
+            "start": "2022-06-24",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Laval",
+            "postalCode": "53810"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid-Amateurs Dames - Promotion B",
+        "dates": {
+            "start": "2022-06-24",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Macon",
+            "postalCode": "71260"
+        }
+    },
+    {
+        "name": "Internationaux de France Seniors 2 - Trophée Mahé",
+        "dates": {
+            "start": "2022-06-24",
+            "end": "2022-06-26"
+        },
+        "location": {
+            "name": "Valence St Did.",
+            "postalCode": "26300"
+        }
+    },
+    {
+        "name": "Hauts-de-France Golf Open (nom TBC) - ALPS / LETAS (Pro)",
+        "dates": {
+            "start": "2022-06-30",
+            "end": "2022-07-02"
+        },
+        "location": {
+            "name": "St Omer",
+            "postalCode": "62380"
+        }
+    },
+    {
+        "name": "Le Vaudreuil Golf Challenge (Pro CT)",
+        "dates": {
+            "start": "2022-07-07",
+            "end": "2022-07-10"
+        },
+        "location": {
+            "name": "Vaudreuil",
+            "postalCode": "27100"
+        }
+    },
+    {
+        "name": "Internationaux de France Seniors Messieurs Double et Simple",
+        "dates": {
+            "start": "2022-07-12",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Isle Adam",
+            "postalCode": "95290"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Garçons - 2ème Division A",
+        "dates": {
+            "start": "2022-07-13",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Carquefou",
+            "postalCode": "44470"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Garçons - 2ème Division B",
+        "dates": {
+            "start": "2022-07-13",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Nancy Aingeray",
+            "postalCode": "54460"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Garçons - 3ème Division B",
+        "dates": {
+            "start": "2022-07-13",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Templiers",
+            "postalCode": "60173"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Garçons - 3ème Division C",
+        "dates": {
+            "start": "2022-07-13",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Bigorre",
+            "postalCode": "65200"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Garçons - 3ème Division D",
+        "dates": {
+            "start": "2022-07-13",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Chanalets",
+            "postalCode": "26500"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Filles - 1ère Division - Trophée Brigitte Varangot",
+        "dates": {
+            "start": "2022-07-14",
+            "end": "2022-07-17"
+        },
+        "location": {
+            "name": "Sable Solesmes",
+            "postalCode": "72300"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Filles - Promotion A",
+        "dates": {
+            "start": "2022-07-14",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Val De L'indre",
+            "postalCode": "36320"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes U16 Filles - Promotion B",
+        "dates": {
+            "start": "2022-07-14",
+            "end": "2022-07-16"
+        },
+        "location": {
+            "name": "Mont Griffon",
+            "postalCode": "95270"
+        }
+    },
+    {
+        "name": "The Evian Championship - Pro LPGA (Pro)",
+        "dates": {
+            "start": "2022-07-21",
+            "end": "2022-07-24"
+        },
+        "location": {
+            "name": "Evian Resort",
+            "postalCode": "74500"
+        }
+    },
+    {
+        "name": "Championnat de France des Jeunes - U12 Filles - Trophée Lacoste",
+        "dates": {
+            "start": "2022-07-23",
+            "end": "2022-07-29"
+        },
+        "location": {
+            "name": "Gouverneur",
+            "postalCode": "01390"
+        }
+    },
+    {
+        "name": "Championnat de France des Jeunes - U12 Garçons - Trophée Crocodile",
+        "dates": {
+            "start": "2022-07-23",
+            "end": "2022-07-29"
+        },
+        "location": {
+            "name": "Gouverneur",
+            "postalCode": "01390"
+        }
+    },
+    {
+        "name": "Championnat de France des Jeunes",
+        "dates": {
+            "start": "2022-07-23",
+            "end": "2022-07-29"
+        },
+        "location": {
+            "name": "Gouverneur",
+            "postalCode": "01390"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors 2 - 1ère Division",
+        "dates": {
+            "start": "2022-09-06",
+            "end": "2022-09-10"
+        },
+        "location": {
+            "name": "Bauge",
+            "postalCode": "49150"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors 2 - 2ème Division",
+        "dates": {
+            "start": "2022-09-06",
+            "end": "2022-09-08"
+        },
+        "location": {
+            "name": "Champ Bataille",
+            "postalCode": "27110"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors 2 - 3ème Division A",
+        "dates": {
+            "start": "2022-09-06",
+            "end": "2022-09-08"
+        },
+        "location": {
+            "name": "Toulouse Teoula",
+            "postalCode": "31830"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors 2 - 3ème Division B",
+        "dates": {
+            "start": "2022-09-06",
+            "end": "2022-09-08"
+        },
+        "location": {
+            "name": "Thumeries",
+            "postalCode": "59239"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors 2 - Promotion A",
+        "dates": {
+            "start": "2022-09-06",
+            "end": "2022-09-08"
+        },
+        "location": {
+            "name": "Ailette",
+            "postalCode": "02860"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors 2 - Promotion B",
+        "dates": {
+            "start": "2022-09-06",
+            "end": "2022-09-08"
+        },
+        "location": {
+            "name": "Nantes Vigneux",
+            "postalCode": "44360"
+        }
+    },
+    {
+        "name": "Coupe de France par équipes Messieurs - Trophée Jean Lignel",
+        "dates": {
+            "start": "2022-09-09",
+            "end": "2022-09-11"
+        },
+        "location": {
+            "name": "Chamonix",
+            "postalCode": "74400"
+        }
+    },
+    {
+        "name": "Championnat Fédéral Entreprise",
+        "dates": {
+            "start": "2022-09-10",
+            "end": "2022-09-11"
+        },
+        "location": {
+            "name": "Saumane",
+            "postalCode": "84800"
+        }
+    },
+    {
+        "name": "Lacoste Ladies Open de France (Pro LET)",
+        "dates": {
+            "start": "2022-09-15",
+            "end": "2022-09-17"
+        },
+        "location": {
+            "name": "Deauville",
+            "postalCode": "14800"
+        }
+    },
+    {
+        "name": "Legends Open de France hosted by Jean Van de Velde - Legends Tour (Pro)",
+        "dates": {
+            "start": "2022-09-15",
+            "end": "2022-09-17"
+        },
+        "location": {
+            "name": "Saint Cloud",
+            "postalCode": "92380"
+        }
+    },
+    {
+        "name": "Coupe de France Entreprise - Finale Nationale - Trophée Raymond Fanen",
+        "dates": {
+            "start": "2022-09-16",
+            "end": "2022-09-18"
+        },
+        "location": {
+            "name": "Haut Poitou",
+            "postalCode": "86130"
+        }
+    },
+    {
+        "name": "Internationaux de France Mid-Amateurs Dames et Messieurs",
+        "dates": {
+            "start": "2022-09-16",
+            "end": "2022-09-18"
+        },
+        "location": {
+            "name": "Bondues",
+            "postalCode": "59910"
+        }
+    },
+    {
+        "name": "Championnat de France des équipes 2 Seniors Messieurs",
+        "dates": {
+            "start": "2022-09-21",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Chalon/saone",
+            "postalCode": "71380"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Dames - 1ère Division - Trophée de la COMMISSION FEMININE",
+        "dates": {
+            "start": "2022-09-21",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "GOLF INTERNATIONAL D'ARCACHON",
+            "postalCode": "33260"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 1ère Division - Trophée Saint Sauveur",
+        "dates": {
+            "start": "2022-09-21",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Wimereux",
+            "postalCode": "62930"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Dames - 2ème Division A",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Mont De Marsan",
+            "postalCode": "40090"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 2ème Division A",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Bresse",
+            "postalCode": "01400"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 2ème Division B",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Royan",
+            "postalCode": "17420"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 3ème Division A",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Val Queven",
+            "postalCode": "56530"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 3ème Division B",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Belle Dune",
+            "postalCode": "80120"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 3ème Division C",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Graves Sauterna",
+            "postalCode": "33210"
+        }
+    },
+    {
+        "name": "Open de France (Pro)",
+        "dates": {
+            "start": "2022-09-22",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Legolfnational",
+            "postalCode": "78280"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Dames - 3ème Division A",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Coutainville",
+            "postalCode": "50230"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Dames - 3ème Division B",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Pau Artiguelouve",
+            "postalCode": "64230"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Dames - Promotion A",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Nantes Erdre",
+            "postalCode": "44300"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Dames - Promotion B",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Lac D'annecy",
+            "postalCode": "74290"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 4ème Division A",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Vire La Dathee",
+            "postalCode": "14380"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 4ème Division B",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Meaux Boutigny",
+            "postalCode": "77470"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 4ème Division C",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "St Cyprien",
+            "postalCode": "66750"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Seniors Messieurs - 4ème Division D",
+        "dates": {
+            "start": "2022-09-23",
+            "end": "2022-09-25"
+        },
+        "location": {
+            "name": "Clou",
+            "postalCode": "01330"
+        }
+    },
+    {
+        "name": "Hopps Open de Provence (Pro CT)",
+        "dates": {
+            "start": "2022-09-29",
+            "end": "2022-10-02"
+        },
+        "location": {
+            "name": "Pont Royal",
+            "postalCode": "13370"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes Mid Amateurs 2 (+40 ans)",
+        "dates": {
+            "start": "2022-09-30",
+            "end": "2022-10-02"
+        },
+        "location": {
+            "name": "Albi",
+            "postalCode": "81000"
+        }
+    },
+    {
+        "name": "Internationaux de France Dames - Trophée Cécile De Rothschild",
+        "dates": {
+            "start": "2022-10-07",
+            "end": "2022-10-09"
+        },
+        "location": {
+            "name": "Aix En Provence",
+            "postalCode": "13090"
+        }
+    },
+    {
+        "name": "Championnat de France de Pitch and Putt par équipes",
+        "dates": {
+            "start": "2022-10-08",
+            "end": "2022-10-09"
+        },
+        "location": {
+            "name": "Avrille",
+            "postalCode": "49240"
+        }
+    },
+    {
+        "name": "Championnat de France par équipes des plus de 60 ans",
+        "dates": {
+            "start": "2022-10-14",
+            "end": "2022-10-16"
+        },
+        "location": {
+            "name": "Nimes Vacquer.",
+            "postalCode": "30900"
+        }
+    },
+    {
+        "name": "Internationaux de France de Foursome Mixte - Trophée Thion de la Chaume",
+        "dates": {
+            "start": "2022-10-14",
+            "end": "2022-10-16"
+        },
+        "location": {
+            "name": "Deauville",
+            "postalCode": "14800"
+        }
+    },
+    {
+        "name": "Championnat de France Minimes Filles et Cadettes - Trophées Ginette Dubois et Challenge Newman",
+        "dates": {
+            "start": "2022-10-25",
+            "end": "2022-10-28"
+        },
+        "location": {
+            "name": "Chiberta",
+            "postalCode": "64600"
+        }
+    },
+    {
+        "name": "Championnat de France Minimes et Cadets Garçons - Coupe Yan Le Quellec et Trophée Patrick Pons",
+        "dates": {
+            "start": "2022-10-26",
+            "end": "2022-10-29"
+        },
+        "location": {
+            "name": "Omaha Beach",
+            "postalCode": "14520"
+        }
+    }
+]
