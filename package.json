@@ -1,0 +1,28 @@
+{
+  "name": "events-distance-calculator",
+  "version": "0.1.0",
+  "description": "Calculates distances between your city and a bunch of events",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcruchon/events-distance-calculator.git"
+  },
+  "keywords": [
+    "distance",
+    "matrix"
+  ],
+  "author": "Gilles CRUCHON <gilles.cruchon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcruchon/events-distance-calculator/issues"
+  },
+  "homepage": "https://github.com/gcruchon/events-distance-calculator#readme",
+  "dependencies": {
+    "openrouteservice-js": "^0.1.31"
+  }
+}
