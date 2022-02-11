@@ -1,15 +1,24 @@
 import express from 'express';
 import createError from 'http-errors';
 import logger from 'morgan';
+import * as OpenApiValidator from 'express-openapi-validator';
 
 import indexRouter from './routes/index.js';
 import apiRouter from './routes/api.js';
+import apiSpec from './apiSpec.js';
 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(logger('dev'));
+app.use(
+    OpenApiValidator.middleware({
+        apiSpec,
+        validateRequests: true,
+        validateResponses: true,
+    })
+);
 
 // Routes
 app.use('/', indexRouter);
