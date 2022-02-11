@@ -3,59 +3,61 @@ import getCityLatLong from './getCity.js';
 import { getMatrixFromCache, saveMatrixToCache } from './cache.js';
 import config from './config.js';
 
-const getDistancesFromAPI = async (locations) => {
-  const destinations = [];
-  for (let i = 1; i < locations.length; i += 1) {
-    destinations.push(i);
-  }
-  const Matrix = new openrouteservice.Matrix({ api_key: config.ORS_API_KEY });
-  return Matrix.calculate({
-    locations,
-    profile: 'driving-car',
-    units: 'km',
-    metrics: ['distance', 'duration'],
-    sources: [0],
-    destinations,
-  });
+const getDistancesFromAPI = async locations => {
+    const destinations = [];
+    for (let i = 1; i < locations.length; i += 1) {
+        destinations.push(i);
+    }
+    const Matrix = new openrouteservice.Matrix({ api_key: config.ORS_API_KEY });
+    return Matrix.calculate({
+        locations,
+        profile: 'driving-car',
+        units: 'km',
+        metrics: ['distance', 'duration'],
+        sources: [0],
+        destinations,
+    });
 };
 
 const getDistances = async (start, destinations) => {
-  const destinationsForAPI = [];
-  const objDistances = {};
-  let matrixesFromCache = [];
-  for (let i = 0; i < destinations.length; i += 1) {
-    matrixesFromCache.push(getMatrixFromCache(start, destinations[i]));
-  }
-  matrixesFromCache = await Promise.all(matrixesFromCache);
-  for (let i = 0; i < destinations.length; i += 1) {
-    const dest = destinations[i];
-    objDistances[dest] = matrixesFromCache[i];
-    if (!objDistances[dest]) {
-      destinationsForAPI.push(dest);
+    const destinationsForAPI = [];
+    const objDistances = {};
+    let matrixesFromCache = [];
+    for (let i = 0; i < destinations.length; i += 1) {
+        matrixesFromCache.push(getMatrixFromCache(start, destinations[i]));
     }
-  }
-  if (destinationsForAPI.length) {
-    let locations = [getCityLatLong(start)];
-    for (let i = 0; i < destinationsForAPI.length; i += 1) {
-      locations.push(getCityLatLong(destinationsForAPI[i]));
+    matrixesFromCache = await Promise.all(matrixesFromCache);
+    for (let i = 0; i < destinations.length; i += 1) {
+        const dest = destinations[i];
+        objDistances[dest] = matrixesFromCache[i];
+        if (!objDistances[dest]) {
+            destinationsForAPI.push(dest);
+        }
     }
-    locations = await Promise.all(locations);
-    const fromAPI = await getDistancesFromAPI(locations);
-    console.debug('Got matrixes from API', locations);
-    const durationsFromAPI = fromAPI.durations[0];
-    const distancesFromAPI = fromAPI.distances[0];
-    const savesToCache = [];
-    for (let i = 0; i < destinationsForAPI.length; i += 1) {
-      const dest = destinationsForAPI[i];
-      objDistances[dest] = {
-        duration: durationsFromAPI[i],
-        distance: distancesFromAPI[i],
-      };
-      savesToCache.push(saveMatrixToCache(start, dest, objDistances[dest]));
+    if (destinationsForAPI.length) {
+        let locations = [getCityLatLong(start)];
+        for (let i = 0; i < destinationsForAPI.length; i += 1) {
+            locations.push(getCityLatLong(destinationsForAPI[i]));
+        }
+        locations = await Promise.all(locations);
+        const fromAPI = await getDistancesFromAPI(locations);
+        console.debug('Got matrixes from API', locations);
+        const durationsFromAPI = fromAPI.durations[0];
+        const distancesFromAPI = fromAPI.distances[0];
+        const savesToCache = [];
+        for (let i = 0; i < destinationsForAPI.length; i += 1) {
+            const dest = destinationsForAPI[i];
+            objDistances[dest] = {
+                duration: durationsFromAPI[i],
+                distance: distancesFromAPI[i],
+            };
+            savesToCache.push(
+                saveMatrixToCache(start, dest, objDistances[dest])
+            );
+        }
+        await Promise.all(savesToCache);
     }
-    await Promise.all(savesToCache);
-  }
-  return { start, destinations: objDistances };
+    return { start, destinations: objDistances };
 };
 
 export default getDistances;
