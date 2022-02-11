@@ -1,7 +1,7 @@
 import openrouteservice from 'openrouteservice-js';
 import getCityLatLong from './getCity.js';
 import { getMatrixFromCache, saveMatrixToCache } from './cache.js';
-import config from './config.js';
+import config from '../config.js';
 
 const getDistancesFromAPI = async locations => {
     const destinations = [];

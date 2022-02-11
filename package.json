@@ -27,8 +27,12 @@
     },
     "homepage": "https://github.com/gcruchon/events-distance-calculator#readme",
     "dependencies": {
+        "debug": "^4.3.3",
         "dotenv": "^16.0.0",
+        "express": "^4.17.2",
         "firebase-admin": "^10.0.2",
+        "http-errors": "^2.0.0",
+        "morgan": "^1.10.0",
         "openrouteservice-js": "^0.1.31"
     },
     "devDependencies": {

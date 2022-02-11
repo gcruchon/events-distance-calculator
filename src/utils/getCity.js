@@ -1,5 +1,5 @@
 import openrouteservice from 'openrouteservice-js';
-import config from './config.js';
+import config from '../config.js';
 import { getCityLatLongFromCache, saveCityLatLongToCache } from './cache.js';
 
 const getCityLatLongFromAPI = async postalCode => {
