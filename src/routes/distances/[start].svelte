@@ -26,44 +26,40 @@
 </script>
 
 <h1>Distance aux tournois</h1>
-<p>
+<p class="alert alert-info mt-3">
     Vous habitez dans la ville: <strong>{start}</strong>
-    <button on:click={changeStart}>Changer de ville</button>
+    <button on:click={changeStart} class="mx-3 btn btn-outline-info"
+        >Changer de ville</button
+    >
 </p>
 
 <h2>Liste des événements (du plus près au plus loin)</h2>
 {#each events.sort(sortEvent) as event}
-    <div class="event">
-        <div class="title">
-            {event.name}
-        </div>
-        <div>
-            <span class="dates"
-                >{formatDate(event.dates.start)} - {formatDate(
-                    event.dates.end
-                )}</span
-            >
-            - Golf: {event.location.name}
-        </div>
-        {#if event.distance}
-            <div class="distance">
-                Distance : {Math.round(event.distance, 0)} km
-                {#if event.duration}
-                    ({toHHMMSS(event.duration)})
-                {/if}
+    <div class="card my-2">
+        <div class="card-body">
+            <h5 class="card-title">
+                {event.name}
+            </h5>
+            <div>
+                <span class="text-secondary"
+                    >du {formatDate(event.dates.start)} au {formatDate(
+                        event.dates.end
+                    )}</span
+                >
+            ⛳ <span class="text-success">{event.location.name}</span> 
             </div>
-        {/if}
+            {#if event.distance}
+                <div class="fw-bold mt-2">
+                    🚗 Distance : {Math.round(event.distance, 0)} km
+                    {#if event.duration}
+                    <span class="badge bg-light text-dark">⏳ {toHHMMSS(event.duration)}</span>
+                    {/if}
+                </div>
+            {:else}
+            <div class="fst-italic text-muted mt-2">
+                Pas d'info de distance
+            </div>
+            {/if}
+        </div>
     </div>
 {/each}
-
-<style>
-    .event {
-        margin-bottom: 1em;
-    }
-    .title {
-        font-weight: bold;
-    }
-    .dates {
-        font-style: italic;
-    }
-</style>

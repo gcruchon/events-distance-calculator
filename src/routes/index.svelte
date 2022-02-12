@@ -21,35 +21,39 @@
 </script>
 
 <h1>Êtes-vous loin des tournois&nbsp;?</h1>
-<p>Pour le savoir, entrez le code postal de votre adresse de résidence:</p>
-<p>
+<div class="alert alert-info mt-3">
+    Pour le savoir, entrez le code postal de votre adresse de résidence:
     <input
         type="text"
         id="start"
         pattern="[0-9]{5}"
         title="Code postal sur 5 chiffres"
-        size="5"
+        size="6"
+        maxlength="5"
         on:keypress={onKeyPress}
         bind:value={start}
         class={error ? 'error' : ''}
-    /> (par ex.: 59110)
-</p>
+        aria-describedby="startHelpBlock"
+    />
+</div>
+<div id="startHelpBlock" class="form-text">
+    Le code postal doit comporter 5 chiffres. Par exemple : 59110
+</div>
 {#if error}
-    <p class="error">
+    <div class="alert alert-danger" role="alert">
         Le code postal doit être sur 5 chiffres (y compris s'il commence par un
         zéro)
-    </p>
+    </div>
 {/if}
-<p>
-    <button on:click={seeDistances} disabled={loading}>Voir la distance</button>
-</p>
+<div class="my-3">
+    <button on:click={seeDistances} disabled={loading} class="btn btn-primary"
+        >Voir la distance</button
+    >
+</div>
 
 <style>
     input.error {
         border-color: #a00;
         background-color: rgb(233, 203, 203);
-    }
-    p.error {
-        color: #a00;
     }
 </style>
