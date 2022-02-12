@@ -1,9 +1,9 @@
 import openrouteservice from 'openrouteservice-js';
-import getCityLatLong from './getCity.js';
-import { getMatrixFromCache, saveMatrixToCache } from './cache.js';
-import config from '../config.js';
+import getCityLatLong from './getCity';
+import { getMatrixFromCache, saveMatrixToCache } from './cache';
+import config from '../config';
 
-const getDistancesFromAPI = async locations => {
+const getDistancesFromAPI = async (locations) => {
     const destinations = [];
     for (let i = 1; i < locations.length; i += 1) {
         destinations.push(i);
@@ -19,7 +19,7 @@ const getDistancesFromAPI = async locations => {
     });
 };
 
-const getDistances = async (start, destinations) => {
+export const getDistances = async (start, destinations) => {
     const destinationsForAPI = [];
     const objDistances = {};
     let matrixesFromCache = [];
@@ -59,5 +59,3 @@ const getDistances = async (start, destinations) => {
     }
     return { start, destinations: objDistances };
 };
-
-export default getDistances;

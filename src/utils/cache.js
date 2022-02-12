@@ -1,13 +1,13 @@
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
-import config from '../config.js';
+import config from '../config';
 
 const app = initializeApp({
     credential: cert(config.serviceAccount),
 });
 const db = getFirestore(app);
 
-export const getCityLatLongFromCache = async postalCode => {
+export const getCityLatLongFromCache = async (postalCode) => {
     const citiesRef = db.collection('cities');
     const cities = await citiesRef.where('postalCode', '==', postalCode).get();
     if (!cities.empty) {

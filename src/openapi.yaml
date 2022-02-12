@@ -1,121 +1,121 @@
 openapi: '3.0.2'
 info:
-  version: 1.0.0
-  title: Swagger Events Distance Calculator
-  description: Calculates distances between your city and a bunch of events
-  termsOfService: https://github.com/gcruchon/events-distance-calculator/
-  license:
-    name: MIT
-    url: https://github.com/gcruchon/events-distance-calculator/blob/main/LICENSE
+    version: 1.0.0
+    title: Swagger Events Distance Calculator
+    description: Calculates distances between your city and a bunch of events
+    termsOfService: https://github.com/gcruchon/events-distance-calculator/
+    license:
+        name: MIT
+        url: https://github.com/gcruchon/events-distance-calculator/blob/main/LICENSE
 servers:
-  - url: /api
+    - url: /api
 paths:
-  /distances:
-    post:
-      description: Get the distance of a specific postalCode
-      operationId: getDistances
-      security:
-        - ApiKeyAuth: []
-      requestBody:
-        description: Postal code of starting point
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Start'
-      responses:
-        '200':
-          description: List of events with distance from the starting point
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Event'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
+    /distances:
+        post:
+            description: Get the distance of a specific postalCode
+            operationId: getDistances
+            security:
+                - ApiKeyAuth: []
+            requestBody:
+                description: Postal code of starting point
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/Start'
+            responses:
+                '200':
+                    description: List of events with distance from the starting point
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    $ref: '#/components/schemas/Event'
+                default:
+                    description: unexpected error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Error'
 
 components:
-  schemas:
-    Start:
-      required:
-        - start
-      properties:
-        start:
-          type: string
-          pattern: '^\d{5}$'
-          description: Postal code of the starting point (in France only, with leading 0 if necessary)
-          example: "75015"
+    schemas:
+        Start:
+            required:
+                - start
+            properties:
+                start:
+                    type: string
+                    pattern: '^\d{5}$'
+                    description: Postal code of the starting point (in France only, with leading 0 if necessary)
+                    example: '75015'
 
-    Event:
-      required:
-        - name
-        - dates
-        - location
-      properties:
-        name:
-          type: string
-          description: Event name
-          example: "2022-06-15"
-        dates:
-          $ref: '#/components/schemas/DatesType'
-        location:
-          $ref: '#/components/schemas/LocationType'
-        duration:
-          type: number
-          nullable: true
-          description: Number of seconds to go from starting point to event, by car
-          example: "2022-06-15"
-        distance:
-          type: number
-          nullable: true
-          description: Number of kilometers from starting point to event, by car
-          example: "765.43"
+        Event:
+            required:
+                - name
+                - dates
+                - location
+            properties:
+                name:
+                    type: string
+                    description: Event name
+                    example: '2022-06-15'
+                dates:
+                    $ref: '#/components/schemas/DatesType'
+                location:
+                    $ref: '#/components/schemas/LocationType'
+                duration:
+                    type: number
+                    nullable: true
+                    description: Number of seconds to go from starting point to event, by car
+                    example: '2022-06-15'
+                distance:
+                    type: number
+                    nullable: true
+                    description: Number of kilometers from starting point to event, by car
+                    example: '765.43'
 
-    DatesType:
-      type: object
-      properties:
-        start: 
-          type: string
-          format: date
-          description: Event start date
-          example: "2022-06-15"
-        end: 
-          type: string
-          format: date
-          description: Event end date
-          example: "2022-06-18"
-      required:
-        - start
-        - end
+        DatesType:
+            type: object
+            properties:
+                start:
+                    type: string
+                    format: date
+                    description: Event start date
+                    example: '2022-06-15'
+                end:
+                    type: string
+                    format: date
+                    description: Event end date
+                    example: '2022-06-18'
+            required:
+                - start
+                - end
 
-    LocationType:
-      type: object
-      properties:
-        name: 
-          type: string
-          description: Event name of the event location
-          example: "Château de Langoiran"
-        postalCode: 
-          type: string
-          pattern: '^\d{5}$'
-          description: Postal code of the event address
-          example: "33550"
-      required:
-        - name
-        - postalCode
+        LocationType:
+            type: object
+            properties:
+                name:
+                    type: string
+                    description: Event name of the event location
+                    example: 'Château de Langoiran'
+                postalCode:
+                    type: string
+                    pattern: '^\d{5}$'
+                    description: Postal code of the event address
+                    example: '33550'
+            required:
+                - name
+                - postalCode
 
-    Error:
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
+        Error:
+            required:
+                - code
+                - message
+            properties:
+                code:
+                    type: integer
+                    format: int32
+                message:
+                    type: string

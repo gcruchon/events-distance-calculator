@@ -1,8 +1,8 @@
 import openrouteservice from 'openrouteservice-js';
-import config from '../config.js';
-import { getCityLatLongFromCache, saveCityLatLongToCache } from './cache.js';
+import config from '../config';
+import { getCityLatLongFromCache, saveCityLatLongToCache } from './cache';
 
-const getCityLatLongFromAPI = async postalCode => {
+const getCityLatLongFromAPI = async (postalCode) => {
     const Geocode = new openrouteservice.Geocode({
         api_key: config.ORS_API_KEY,
     });
@@ -15,7 +15,7 @@ const getCityLatLongFromAPI = async postalCode => {
     return response.features[0].geometry.coordinates;
 };
 
-const getCityLatLong = async postalCode => {
+const getCityLatLong = async (postalCode) => {
     let cityLatLong = await getCityLatLongFromCache(postalCode);
     if (!cityLatLong) {
         cityLatLong = await getCityLatLongFromAPI(postalCode);

@@ -107,3 +107,9 @@ dist
 .DS_Store
 cache
 src/config.js
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example

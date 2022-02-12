@@ -2,15 +2,14 @@
     "name": "events-distance-calculator",
     "version": "0.1.0",
     "description": "Calculates distances between your city and a bunch of events",
-    "main": "src/index.js",
     "type": "module",
     "scripts": {
-        "start": "node src/index.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint src/**/*.js",
-        "lint:fix": "eslint src/**/*.js --fix",
-        "format": "prettier --check \"./**/*.{js,jsx,json}\"",
-        "format:fix": "prettier --write \"./**/*.{js,jsx,json}\""
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "package": "svelte-kit package",
+        "preview": "svelte-kit preview",
+        "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+        "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
     },
     "repository": {
         "type": "git",
@@ -26,64 +25,17 @@
         "url": "https://github.com/gcruchon/events-distance-calculator/issues"
     },
     "homepage": "https://github.com/gcruchon/events-distance-calculator#readme",
-    "dependencies": {
-        "debug": "^4.3.3",
-        "dotenv": "^16.0.0",
-        "express": "^4.17.2",
-        "express-openapi-validator": "^4.13.5",
-        "firebase-admin": "^10.0.2",
-        "http-errors": "^2.0.0",
-        "morgan": "^1.10.0",
-        "openrouteservice-js": "^0.1.31"
-    },
     "devDependencies": {
-        "eslint": "^8.8.0",
-        "eslint-config-airbnb": "^19.0.4",
+        "@sveltejs/adapter-auto": "next",
+        "@sveltejs/kit": "next",
+        "date-fns": "^2.28.0",
+        "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-jsx-a11y": "^6.5.1",
-        "eslint-plugin-react": "^7.28.0",
-        "eslint-plugin-react-hooks": "^4.3.0",
-        "prettier": "^2.5.1"
-    },
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "singleQuote": true,
-        "arrowParens": "avoid"
-    },
-    "eslintConfig": {
-        "env": {
-            "browser": true,
-            "es2021": true
-        },
-        "extends": [
-            "airbnb-base",
-            "prettier"
-        ],
-        "parserOptions": {
-            "ecmaVersion": "latest",
-            "sourceType": "module"
-        },
-        "rules": {
-            "import/extensions": 0,
-            "import/no-unresolved": [
-                "error",
-                {
-                    "ignore": [
-                        "^firebase-admin/.+"
-                    ]
-                }
-            ],
-            "no-console": [
-                "error",
-                {
-                    "allow": [
-                        "debug",
-                        "error"
-                    ]
-                }
-            ]
-        }
+        "eslint-plugin-svelte3": "^3.2.1",
+        "firebase-admin": "^10.0.2",
+        "openrouteservice-js": "^0.1.31",
+        "prettier": "^2.4.1",
+        "prettier-plugin-svelte": "^2.4.0",
+        "svelte": "^3.44.0"
     }
 }
