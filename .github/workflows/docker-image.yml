@@ -1,0 +1,48 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: npm install
+      run: npm ci
+
+    - name: npm build
+      run: npm run build
+
+    - name: docker login docker hub
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASS: ${{secrets.DOCKER_PASS}}
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+
+    - name: docker login registry.redhat.io
+      env:
+        REDHAT_USER: ${{secrets.REDHAT_USER}}
+        REDHAT_PASS: ${{secrets.REDHAT_PASS}}
+      run: docker login registry.redhat.io -u $REDHAT_USER -p $REDHAT_PASS
+
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag events-distance-calculator:latest
+
+    - name: Tag image
+      run: docker tag events-distance-calculator:latest ${{secrets.DOCKER_USER}}/events-distance-calculator:latest
+
+    - name: Push to Docker Hub
+      run: docker push ${{secrets.DOCKER_USER}}/events-distance-calculator:latest
