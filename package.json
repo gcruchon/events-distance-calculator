@@ -26,9 +26,12 @@
     },
     "homepage": "https://github.com/gcruchon/events-distance-calculator#readme",
     "dependencies": {
-      "date-fns": "^2.28.0",
-      "firebase-admin": "^10.0.2",
-      "openrouteservice-js": "^0.1.31"
+        "date-fns": "^2.28.0",
+        "dotenv": "^16.0.0",
+        "firebase-admin": "^10.0.2",
+        "openrouteservice-js": "^0.1.31",
+        "winston": "^3.6.0",
+        "winston-daily-rotate-file": "^4.6.0"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "next",

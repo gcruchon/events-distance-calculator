@@ -1,6 +1,7 @@
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import config from '../config';
+import logger from './logger';
 
 const app = initializeApp({
     credential: cert(config.serviceAccount),
@@ -11,7 +12,7 @@ export const getCityLatLongFromCache = async (postalCode) => {
     const citiesRef = db.collection('cities');
     const cities = await citiesRef.where('postalCode', '==', postalCode).get();
     if (!cities.empty) {
-        console.debug('Firebase: Got city from cache', postalCode);
+        logger.debug('Firebase: Got city from cache', postalCode);
         return cities.docs[0].get('latLong');
     }
     return null;
@@ -24,7 +25,7 @@ export const saveCityLatLongToCache = async (postalCode, latLong) => {
     };
     const citiesRef = db.collection('cities');
     const res = await citiesRef.add(city);
-    console.debug('Firebase: Saved city in cache', postalCode, res.id);
+    logger.debug('Firebase: Saved city in cache', postalCode, res.id);
     return res;
 };
 
@@ -35,7 +36,7 @@ export const getMatrixFromCache = async (start, dest) => {
         .where('dest', '==', dest)
         .get();
     if (!matrixes.empty) {
-        console.debug('Firebase: Got matrix from cache', start, dest);
+        logger.debug('Firebase: Got matrix from cache', start, dest);
         return {
             duration: matrixes.docs[0].get('duration'),
             distance: matrixes.docs[0].get('distance'),
@@ -46,7 +47,7 @@ export const getMatrixFromCache = async (start, dest) => {
         .where('dest', '==', start)
         .get();
     if (!matrixes.empty) {
-        console.debug('Firebase: Got matrix from cache', dest, start);
+        logger.debug('Firebase: Got matrix from cache', dest, start);
         return {
             duration: matrixes.docs[0].get('duration'),
             distance: matrixes.docs[0].get('distance'),
@@ -64,6 +65,6 @@ export const saveMatrixToCache = async (start, dest, matrix) => {
     };
     const distancesRef = db.collection('matrixes');
     const res = await distancesRef.add(newMatrix);
-    console.debug('Firebase: Saved matrix in cache', start, dest, res.id);
+    logger.debug('Firebase: Saved matrix in cache', start, dest, res.id);
     return res;
 };

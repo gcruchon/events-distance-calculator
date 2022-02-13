@@ -1,6 +1,7 @@
 import openrouteservice from 'openrouteservice-js';
 import getCityLatLong from './getCity';
 import { getMatrixFromCache, saveMatrixToCache } from './cache';
+import logger from './logger';
 import config from '../config';
 
 const getDistancesFromAPI = async (locations) => {
@@ -41,7 +42,7 @@ export const getDistances = async (start, destinations) => {
         }
         locations = await Promise.all(locations);
         const fromAPI = await getDistancesFromAPI(locations);
-        console.debug('Got matrixes from API', locations);
+        logger.debug('Got matrixes from API', locations);
         const durationsFromAPI = fromAPI.durations[0];
         const distancesFromAPI = fromAPI.distances[0];
         const savesToCache = [];

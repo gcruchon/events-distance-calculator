@@ -46,19 +46,21 @@
                         event.dates.end
                     )}</span
                 >
-            ⛳ <span class="text-success">{event.location.name}</span> 
+                ⛳ <span class="text-success">{event.location.name}</span>
             </div>
             {#if event.distance}
                 <div class="fw-bold mt-2">
                     🚗 Distance : {Math.round(event.distance, 0)} km
                     {#if event.duration}
-                    <span class="badge bg-light text-dark">⏳ {toHHMMSS(event.duration)}</span>
+                        <span class="badge bg-light text-dark"
+                            >⏳ {toHHMMSS(event.duration)}</span
+                        >
                     {/if}
                 </div>
             {:else}
-            <div class="fst-italic text-muted mt-2">
-                Pas d'info de distance
-            </div>
+                <div class="fst-italic text-muted mt-2">
+                    Pas d'info de distance
+                </div>
             {/if}
         </div>
     </div>

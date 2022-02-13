@@ -1,5 +1,6 @@
 import openrouteservice from 'openrouteservice-js';
 import config from '../config';
+import logger from './logger';
 import { getCityLatLongFromCache, saveCityLatLongToCache } from './cache';
 
 const getCityLatLongFromAPI = async (postalCode) => {
@@ -11,7 +12,7 @@ const getCityLatLongFromAPI = async (postalCode) => {
         layers: ['postalcode'],
         boundary_country: ['FR'],
     });
-    console.debug('Got city from API', postalCode);
+    logger.debug('Got city from API', postalCode);
     return response.features[0].geometry.coordinates;
 };
 

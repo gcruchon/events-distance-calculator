@@ -106,7 +106,6 @@ dist
 # Application
 .DS_Store
 cache
-src/config.js
 /build
 /.svelte-kit
 /package
